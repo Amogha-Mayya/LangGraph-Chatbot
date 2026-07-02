@@ -4,9 +4,10 @@ from langchain_core.messages import HumanMessage, AIMessage
 import uuid
 
 # **************************************** utility functions *************************
-
+import os
+os.environ['LANGCHAIN_PROJECT'] = 'langsmith-chatbot'
 def generate_thread_id():
-    thread_id = uuid.uuid4()
+    thread_id = uuid.uuid4()    
     return thread_id
 
 def reset_chat():
